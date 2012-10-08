@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  std_id: MyString
+  std_path: MyString
+  std_info: 
+
+two:
+  std_id: MyString
+  std_path: MyString
+  std_info: 

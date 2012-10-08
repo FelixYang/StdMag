@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  std_id: MyString
+  std_release_time: MyString
+  std_org: MyString
+  std_name_cn: MyText
+  std_name_en: MyText
+  std_language: MyString
+  std_tag1: MyString
+  std_tag2: MyString
+
+two:
+  std_id: MyString
+  std_release_time: MyString
+  std_org: MyString
+  std_name_cn: MyText
+  std_name_en: MyText
+  std_language: MyString
+  std_tag1: MyString
+  std_tag2: MyString

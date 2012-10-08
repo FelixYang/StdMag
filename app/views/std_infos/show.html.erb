@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Std:</b>
+  <%= @std_info.std_id %>
+</p>
+
+<p>
+  <b>Std release time:</b>
+  <%= @std_info.std_release_time %>
+</p>
+
+<p>
+  <b>Std org:</b>
+  <%= @std_info.std_org %>
+</p>
+
+<p>
+  <b>Std name cn:</b>
+  <%= @std_info.std_name_cn %>
+</p>
+
+<p>
+  <b>Std name en:</b>
+  <%= @std_info.std_name_en %>
+</p>
+
+<p>
+  <b>Std language:</b>
+  <%= @std_info.std_language %>
+</p>
+
+<p>
+  <b>Std tag1:</b>
+  <%= @std_info.std_tag1 %>
+</p>
+
+<p>
+  <b>Std tag2:</b>
+  <%= @std_info.std_tag2 %>
+</p>
+
+
+<%= link_to 'Edit', edit_std_info_path(@std_info) %> |
+<%= link_to 'Back', std_infos_path %>
