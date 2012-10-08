@@ -41,7 +41,7 @@ class StdInfosController < ApplicationController
   # POST /std_infos.json
   def create
     @std_info = StdInfo.new(params[:std_info])
-
+    
     respond_to do |format|
       if @std_info.save
         format.html { redirect_to @std_info, notice: 'Std info was successfully created.' }
@@ -80,4 +80,5 @@ class StdInfosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # 
 end

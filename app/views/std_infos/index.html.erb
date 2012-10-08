@@ -10,6 +10,7 @@
     <th width="10%">标准语言</th>
     <th width="10%">tag1</th>
     <th width="10%">tag2</th>
+    <!-- <th width="10%">Path</th> -->
     <th></th>
     <th></th>
     <th></th>
@@ -20,11 +21,12 @@
     <td align="center" width="10%"><%= link_to std_info.std_id, std_info %></td>
     <td align="center" width="10%"><%= std_info.std_release_time %></td>
     <td align="center" width="10%"><%= std_info.std_org %></td>
-    <td align="left" width="15%"><%= std_info.std_name_cn %></td>
+    <td align="left" width="15%"><a href = "<%= std_info.std_path %>"><%= std_info.std_name_cn %></td>
     <td align="left" width="15%"><%= std_info.std_name_en %></td>
     <td align="center" width="10%"><%= std_info.std_language %></td>
     <td align="center" width="10%"><%= std_info.std_tag1 %></td>
     <td align="center" width="10%"><%= std_info.std_tag2 %></td>
+    <!-- <td align="center" width="10%"><a href = "<%= std_info.std_path %>"><%= std_info.std_path %></a></td> -->
     
     <td><%= link_to 'Destrory', std_info, method: :delete  %></td>
 

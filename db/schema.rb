@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008063635) do
+ActiveRecord::Schema.define(:version => 20121008150001) do
 
   create_table "std_infos", :force => true do |t|
     t.string   "std_id"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20121008063635) do
     t.string   "std_tag2"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "std_path"
   end
 
   create_table "std_paths", :force => true do |t|
