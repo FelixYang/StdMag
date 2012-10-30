@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008150001) do
+ActiveRecord::Schema.define(:version => 20121030152911) do
 
   create_table "std_infos", :force => true do |t|
     t.string   "std_id"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20121008150001) do
     t.string   "std_path"
   end
 
+  create_table "std_infos_tags", :id => false, :force => true do |t|
+    t.integer "std_id"
+    t.integer "tag_id"
+  end
+
   create_table "std_paths", :force => true do |t|
     t.string   "std_id"
     t.string   "std_path"
@@ -36,5 +41,18 @@ ActiveRecord::Schema.define(:version => 20121008150001) do
   end
 
   add_index "std_paths", ["std_info_id"], :name => "index_std_paths_on_std_info_id"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "std_info_id"
+    t.integer  "tag_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "tag_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

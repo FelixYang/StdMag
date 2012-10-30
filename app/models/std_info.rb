@@ -4,8 +4,18 @@ class StdInfo < ActiveRecord::Base
   validates :std_name_cn, :presence => true
   validates :std_name_en, :presence => true
   
+  has_many :taggings
+  has_many :tags, :through => :taggings
+
   
   # def self.std_path(std_id)
-  #   StdPath.find_by_name(std_id)
+  #   StdPath.find_by_name(std_id)s
   # end
+  def self.find_for_test
+    find(:all, :order => "std_id")
+  end
+  
+  def self.find_by_tag(tag)
+    find_all_by_std_tag1(tag) + find_all_by_std_tag2(tag)
+  end
 end

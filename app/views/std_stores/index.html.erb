@@ -1,0 +1,12 @@
+<h1>StdStore#index</h1>
+<p>Find me in app/views/std_store/index.html.erb</p>
+
+
+
+<%= form_tag std_stores_show_path(@std_stores) do %>
+    请输入所要搜索的tag：
+    <%= text_field_tag :tag, params[:tag] %>
+    <%= submit_tag :search %>
+<% end %>
+
+

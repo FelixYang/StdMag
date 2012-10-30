@@ -1,5 +1,12 @@
 StdMag::Application.routes.draw do
+  # get "std_stores/index"
+
+  match "std_stores/show" => "std_stores#show"
+  
   resources :std_infos
+  resources :std_stores
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

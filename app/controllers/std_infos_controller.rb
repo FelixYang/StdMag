@@ -2,12 +2,13 @@ class StdInfosController < ApplicationController
   # GET /std_infos
   # GET /std_infos.json
   def index
-    @std_infos = StdInfo.all
+    @std_infos = StdInfo.page(params[:page]).per(6)
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @std_infos }
-    end
+
+    # respond_to do |format|
+      # format.html # index.html.erb
+      # format.json { render json: @std_infos }
+    # end
   end
 
   # GET /std_infos/1

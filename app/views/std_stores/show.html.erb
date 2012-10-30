@@ -1,0 +1,30 @@
+<h1>StdStore#show</h1>
+
+<!--
+ <form>
+    请输入所搜索的：
+    <input type="text" id="search" size="20">
+    <input type="submit"> 
+</form>
+-->
+    <% if @std_infos != nil %>
+    
+    <table>
+        <th>
+            <td>std_id</td>
+            <td>std_name_en</td>
+            <td>std_name_cn</td>
+        </th>
+        <% @std_infos.each do |std_info| -%>
+         <tr>
+             <td><%=h std_info.std_id %></td>
+             <td><%= std_info.std_name_en %></td>
+             <td><%= std_info.std_name_cn %></td>
+         </tr>
+         <% end %>
+     </table>
+    <% else %>
+        <h2>No item<.h2>
+    <% end %>
+
+    <%= link_to 'Back', std_stores_path %>

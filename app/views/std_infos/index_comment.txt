@@ -1,5 +1,0 @@
-    <!--
-    <td ><%= link_to 'Show', std_info %></td>
-    <td><%= link_to 'Edit', edit_std_info_path(std_info) %></td>
-    <td><%= link_to 'Destroy', std_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    --> 
